@@ -1,0 +1,8 @@
+import { cp, mkdir, rename, writeFile } from "node:fs/promises";
+await mkdir("dist/public", { recursive: true });
+await rename("dist/index.html", "dist/public/index.html");
+await rename("dist/assets", "dist/public/assets");
+await mkdir("dist/server", { recursive: true });
+await mkdir("dist/.openai", { recursive: true });
+await cp(".openai/hosting.json", "dist/.openai/hosting.json");
+await writeFile("dist/server/index.js", `export default { async fetch(request, env) { return env.ASSETS.fetch(request); } };\n`);

@@ -1,0 +1,12 @@
+{
+  "name": "hajin-personal-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite test",
+    "build": "vite build test --outDir ../dist --emptyOutDir && node build-sites.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
