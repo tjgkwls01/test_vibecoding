@@ -79,3 +79,14 @@
 - 현재 배포 환경에 Supabase URL과 Publishable Key가 설정되지 않은 상태임을 확인했습니다.
 - 변경 파일: `test/auth.html`, `test/auth.js`, `test/styles.css`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과
+
+### 회원가입 전용 페이지 분리
+
+- 로그인 페이지 상단의 HOME 메뉴를 제거하고 우측 BACK HOME 링크만 유지했습니다.
+- 기존에 동작하지 않던 회원가입 탭을 별도의 `signup.html` 페이지로 교체했습니다.
+- 회원가입 시 이메일, 비밀번호, 비밀번호 확인, 나이, 성별, 지역 및 개인정보 수집 동의를 받도록 구성했습니다.
+- 나이, 성별, 지역은 Supabase 사용자 메타데이터에 저장하도록 인증 로직을 구현했습니다.
+- 로그인 페이지와 회원가입 페이지가 서로 이동할 수 있도록 연결했습니다.
+- 모바일 회원가입 폼과 배포 빌드 설정을 추가했습니다.
+- 변경 파일: `test/auth.html`, `test/auth.js`, `test/signup.html`, `test/signup.js`, `test/styles.css`, `test/vite.config.js`, `build-sites.mjs`, `WORKLOG.md`
+- 검증: Supabase 환경 변수 미설정 및 테스트 값 설정 상태에서 `npm run build`, `git diff --check` 통과 및 `dist/public/signup.html` 생성 확인

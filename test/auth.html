@@ -13,9 +13,8 @@
 <body>
   <header>
     <a class="logo" href="index.html">SH<span>.</span></a>
-    <nav aria-label="주 메뉴"><a href="index.html">HOME</a></nav>
+    <span class="header-spacer" aria-hidden="true"></span>
     <a class="contact" href="index.html">BACK HOME ↗</a>
-    <button class="menu" type="button" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i></button>
   </header>
 
   <main class="auth-page">
@@ -31,17 +30,11 @@
       </div>
 
       <div class="auth-guest" id="auth-guest">
-        <div class="auth-tabs" role="tablist"><button class="active" type="button" role="tab" data-auth-tab="login">로그인</button><button type="button" role="tab" data-auth-tab="signup">회원가입</button></div>
+        <div class="auth-heading"><span>LOGIN</span><a href="signup.html">회원가입 ↗</a></div>
         <form id="login-form" class="auth-form">
           <label>EMAIL<input name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
           <label>PASSWORD<input name="password" type="password" autocomplete="current-password" minlength="6" placeholder="6자 이상 입력" required></label>
           <button class="auth-submit" type="submit">로그인 ↗</button>
-        </form>
-        <form id="signup-form" class="auth-form" hidden>
-          <label>EMAIL<input name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
-          <label>PASSWORD<input name="password" type="password" autocomplete="new-password" minlength="6" placeholder="6자 이상 입력" required></label>
-          <label>PASSWORD CONFIRM<input name="passwordConfirm" type="password" autocomplete="new-password" minlength="6" placeholder="비밀번호 다시 입력" required></label>
-          <button class="auth-submit" type="submit">회원가입 ↗</button>
         </form>
       </div>
 
@@ -53,7 +46,6 @@
   </main>
 
   <footer><a class="logo" href="index.html">SH<span>.</span></a><p>MADE WITH CURIOSITY<br>AND VIBE CODING</p><div><a href="https://github.com/tjgkwls01">GITHUB ↗</a><a href="index.html">HOME ↗</a></div><small>© 2026 SEO HAJIN</small></footer>
-  <script type="module" src="./script.js"></script>
   <script type="module" src="./auth.js"></script>
 </body>
 </html>
