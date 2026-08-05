@@ -70,3 +70,12 @@
 - 이메일 가입 확인 후 돌아오는 주소가 현재 배포 경로를 유지하도록 수정했습니다.
 - 변경 파일: `test/index.html`, `test/qna.html`, `test/auth.html`, `test/auth.js`, `test/vite.config.js`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과 및 빌드 결과에서 최상위 고정 내부 경로가 없음을 확인
+
+### 로그인 페이지 UI 및 메뉴 수정
+
+- 로그인 페이지 상단에서 불필요한 Q&A와 ACCOUNT 링크를 제거하고 HOME만 유지했습니다.
+- 인증 서버 연결 전에도 로그인·회원가입 탭과 입력 폼이 항상 보이도록 수정했습니다.
+- 연결 전 폼 제출 시 필요한 설정을 안내하고, 연결 후에는 기존 실제 인증 로직이 그대로 작동하도록 구성했습니다.
+- 현재 배포 환경에 Supabase URL과 Publishable Key가 설정되지 않은 상태임을 확인했습니다.
+- 변경 파일: `test/auth.html`, `test/auth.js`, `test/styles.css`, `WORKLOG.md`
+- 검증: `npm run build`, `git diff --check` 통과

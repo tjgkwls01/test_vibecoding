@@ -14,6 +14,17 @@ const showMessage = (text, isError = false) => {
 
 if (!supabaseUrl || !publishableKey) {
   setup.hidden = false;
+  document.querySelectorAll(".auth-form").forEach((form) => form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    showMessage("인증 서버 연결이 필요합니다. Supabase 연결 정보를 설정해 주세요.", true);
+  }));
+  document.querySelectorAll("[data-auth-tab]").forEach((button) => button.addEventListener("click", () => {
+    const isLogin = button.dataset.authTab === "login";
+    document.querySelector("#login-form").hidden = !isLogin;
+    document.querySelector("#signup-form").hidden = isLogin;
+    document.querySelectorAll("[data-auth-tab]").forEach((tab) => tab.classList.toggle("active", tab === button));
+    showMessage("");
+  }));
 } else {
   const supabase = createClient(supabaseUrl, publishableKey);
 

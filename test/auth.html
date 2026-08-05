@@ -13,7 +13,7 @@
 <body>
   <header>
     <a class="logo" href="index.html">SH<span>.</span></a>
-    <nav aria-label="주 메뉴"><a href="index.html">HOME</a><a href="qna.html">Q&amp;A</a><a href="auth.html" aria-current="page">ACCOUNT</a></nav>
+    <nav aria-label="주 메뉴"><a href="index.html">HOME</a></nav>
     <a class="contact" href="index.html">BACK HOME ↗</a>
     <button class="menu" type="button" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i></button>
   </header>
@@ -27,10 +27,10 @@
 
     <section class="auth-panel" aria-live="polite">
       <div class="auth-setup" id="auth-setup" hidden>
-        <span>SETUP REQUIRED</span><h2>인증 서비스 연결이 필요합니다.</h2><p>Supabase 프로젝트 URL과 Publishable Key를 환경 변수에 설정하면 실제 회원가입과 로그인이 활성화됩니다.</p>
+        <span>SETUP REQUIRED</span><p>현재 인증 서버 연결 전입니다. Supabase 연결 값을 설정하면 아래 회원가입과 로그인이 즉시 활성화됩니다.</p>
       </div>
 
-      <div class="auth-guest" id="auth-guest" hidden>
+      <div class="auth-guest" id="auth-guest">
         <div class="auth-tabs" role="tablist"><button class="active" type="button" role="tab" data-auth-tab="login">로그인</button><button type="button" role="tab" data-auth-tab="signup">회원가입</button></div>
         <form id="login-form" class="auth-form">
           <label>EMAIL<input name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
