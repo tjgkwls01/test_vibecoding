@@ -9,7 +9,7 @@ nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () =>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("visible"));
 }, { threshold: .12 });
-document.querySelectorAll(".section h2,.interest-list article,.project").forEach((el) => {
+document.querySelectorAll(".section h2,.interest-list article,.experience-item,.design-grid article,.theater-timeline li,.project").forEach((el) => {
   el.classList.add("reveal");
   observer.observe(el);
 });
