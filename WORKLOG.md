@@ -90,3 +90,9 @@
 - 모바일 회원가입 폼과 배포 빌드 설정을 추가했습니다.
 - 변경 파일: `test/auth.html`, `test/auth.js`, `test/signup.html`, `test/signup.js`, `test/styles.css`, `test/vite.config.js`, `build-sites.mjs`, `WORKLOG.md`
 - 검증: Supabase 환경 변수 미설정 및 테스트 값 설정 상태에서 `npm run build`, `git diff --check` 통과 및 `dist/public/signup.html` 생성 확인
+
+### 회원가입 기본 정보 항목 조정
+
+- 나이 입력을 출생년도 입력으로 변경하고 저장 필드를 `birth_year`로 수정했습니다.
+- 성별 선택지에서 논바이너리를 제거했습니다.
+- 변경 파일: `test/signup.html`, `test/signup.js`, `WORKLOG.md`

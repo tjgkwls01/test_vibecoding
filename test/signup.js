@@ -29,7 +29,7 @@ if (!supabaseUrl || !publishableKey) {
       password: values.get("password"),
       options: {
         emailRedirectTo: new URL("auth.html", window.location.href).href,
-        data: { age: Number(values.get("age")), gender: values.get("gender"), region: values.get("region").trim() },
+        data: { birth_year: Number(values.get("birthYear")), gender: values.get("gender"), region: values.get("region").trim() },
       },
     });
     if (error) return showMessage(error.message, true);
