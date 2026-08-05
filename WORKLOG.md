@@ -96,3 +96,13 @@
 - 나이 입력을 출생년도 입력으로 변경하고 저장 필드를 `birth_year`로 수정했습니다.
 - 성별 선택지에서 논바이너리를 제거했습니다.
 - 변경 파일: `test/signup.html`, `test/signup.js`, `WORKLOG.md`
+
+### 상단 내비게이션 재구성 및 이름 제거
+
+- 메인 메뉴를 ABOUT, EXPERIENCE, NOW, Q&A와 우측 LOGIN으로 정리했습니다.
+- EXPERIENCE 아래에 프로젝트, 디자인 경험, 동아리 활동으로 이동하는 하위 메뉴를 추가했습니다.
+- 데스크톱의 마우스·키보드 조작과 모바일 펼침 메뉴에 대응했습니다.
+- 웹페이지의 한글·영문 실명과 이름 이니셜 로고를 제거하고 `STILL.`로 교체했습니다.
+- 페이지 제목, 설명, 소개 문장, 푸터 저작권 표기에서도 이름을 제거했습니다.
+- 변경 파일: `test/index.html`, `test/qna.html`, `test/auth.html`, `test/signup.html`, `test/styles.css`, `WORKLOG.md`
+- 검증: 웹 소스 내 이름 잔존 여부 검사, `npm run build`, `git diff --check` 통과
