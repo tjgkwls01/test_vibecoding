@@ -19,11 +19,12 @@ if (experienceWindow) {
   const track = experienceWindow.querySelector(".experience-track");
   const tabs = [...experienceWindow.querySelectorAll("[data-slide]")];
   const indicators = [...experienceWindow.querySelectorAll("[data-indicator]")];
+  const panels = [...experienceWindow.querySelectorAll("[data-slide-panel]")];
   let activeSlide = 0;
   let touchStartX = 0;
 
   const showSlide = (index, updateHash = false) => {
-    activeSlide = (index + tabs.length) % tabs.length;
+    activeSlide = (index + panels.length) % panels.length;
     track.style.transform = `translateX(-${activeSlide * 100}%)`;
     tabs.forEach((tab, tabIndex) => {
       const active = tabIndex === activeSlide;
@@ -40,8 +41,6 @@ if (experienceWindow) {
 
   tabs.forEach((tab) => tab.addEventListener("click", () => showSlide(Number(tab.dataset.slide), true)));
   indicators.forEach((indicator) => indicator.addEventListener("click", () => showSlide(Number(indicator.dataset.indicator), true)));
-  experienceWindow.querySelector("[data-slide-prev]").addEventListener("click", () => showSlide(activeSlide - 1, true));
-  experienceWindow.querySelector("[data-slide-next]").addEventListener("click", () => showSlide(activeSlide + 1, true));
   experienceWindow.addEventListener("touchstart", (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
   experienceWindow.addEventListener("touchend", (event) => {
     const distance = event.changedTouches[0].clientX - touchStartX;

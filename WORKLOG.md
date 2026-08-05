@@ -136,3 +136,14 @@
 - 새 상세 페이지 3개가 배포 결과물에 포함되도록 Vite 및 호스팅 빌드 설정을 확장했습니다.
 - 변경 파일: `test/index.html`, `test/projects.html`, `test/design.html`, `test/theater.html`, `test/styles.css`, `test/vite.config.js`, `build-sites.mjs`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과 및 세 상세 페이지와 캐러셀 링크 생성 확인
+
+### EXPERIENCE 캐러셀 UI 간소화
+
+- 캐러셀 상단의 PROJECTS, DESIGN, THEATER 탭 바와 페이지 수 표시를 제거했습니다.
+- 하단의 PREV, NEXT 버튼을 제거하고 캐러셀 인디케이터만 중앙에 남겼습니다.
+- 슬라이드의 좌측 상단 번호와 EXPERIENCE 표기, VIEW PAGE 문구를 제거했습니다.
+- EXPERIENCE 소개의 탭·화살표 사용 안내 문구를 삭제했습니다.
+- 슬라이드 클릭을 통한 상세 페이지 이동과 모바일 스와이프는 유지했습니다.
+- 탭 제거 후에도 세 패널을 기준으로 슬라이드 순환이 작동하도록 JavaScript를 수정했습니다.
+- 변경 파일: `test/index.html`, `test/styles.css`, `test/script.js`, `WORKLOG.md`
+- 검증: 제거 대상 문구 검사, `npm run build`, `git diff --check` 통과
