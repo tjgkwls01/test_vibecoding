@@ -61,3 +61,12 @@
 - 변경 파일: `test/auth.html`, `test/auth.js`, `test/styles.css`, `test/index.html`, `test/qna.html`, `test/vite.config.js`, `build-sites.mjs`, `.env.example`, `.gitignore`, `package.json`, `package-lock.json`, `WORKLOG.md`
 - 검증: 환경 변수 미설정 및 테스트 환경 변수 설정 상태에서 `npm run build`, `git diff --check` 통과
 - 남은 연결 작업: Supabase 프로젝트 URL과 Publishable Key 설정, 운영 사이트 URL 등록
+
+### Q&A·로그인 페이지 경로 오류 수정
+
+- 하위 경로에 배포된 사이트에서 `/qna.html`, `/auth.html`이 도메인 최상위를 요청해 `Cannot GET`이 발생하는 문제를 수정했습니다.
+- 페이지, 스크립트, 내비게이션 링크를 배포 위치 기준의 상대 경로로 변경했습니다.
+- Vite의 정적 에셋 경로도 상대 경로로 생성되도록 설정했습니다.
+- 이메일 가입 확인 후 돌아오는 주소가 현재 배포 경로를 유지하도록 수정했습니다.
+- 변경 파일: `test/index.html`, `test/qna.html`, `test/auth.html`, `test/auth.js`, `test/vite.config.js`, `WORKLOG.md`
+- 검증: `npm run build`, `git diff --check` 통과 및 빌드 결과에서 최상위 고정 내부 경로가 없음을 확인

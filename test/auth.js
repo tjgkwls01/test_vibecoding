@@ -50,7 +50,7 @@ if (!supabaseUrl || !publishableKey) {
     const { data, error } = await supabase.auth.signUp({
       email: values.get("email"),
       password: values.get("password"),
-      options: { emailRedirectTo: `${window.location.origin}/auth.html` },
+      options: { emailRedirectTo: new URL("auth.html", window.location.href).href },
     });
     if (error) return showMessage(error.message, true);
     event.currentTarget.reset();
