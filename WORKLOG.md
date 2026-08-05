@@ -106,3 +106,14 @@
 - 페이지 제목, 설명, 소개 문장, 푸터 저작권 표기에서도 이름을 제거했습니다.
 - 변경 파일: `test/index.html`, `test/qna.html`, `test/auth.html`, `test/signup.html`, `test/styles.css`, `WORKLOG.md`
 - 검증: 웹 소스 내 이름 잔존 여부 검사, `npm run build`, `git diff --check` 통과
+
+### EXPERIENCE 가로 슬라이드 윈도우 구현
+
+- 분리되어 있던 프로젝트, 디자인 경험, 동아리 활동을 홈페이지의 하나의 브라우저형 윈도우에 통합했습니다.
+- 상단 탭과 이전·다음 버튼으로 세 화면을 좌우 슬라이드할 수 있도록 구현했습니다.
+- 모바일에서는 좌우 스와이프로도 화면을 넘길 수 있도록 터치 동작을 추가했습니다.
+- 현재 화면 번호와 선택된 탭이 슬라이드에 맞춰 갱신되도록 구성했습니다.
+- 상단 EXPERIENCE 하위 메뉴에서 원하는 슬라이드를 바로 열 수 있도록 연결했습니다.
+- Q&A 페이지에서 특정 EXPERIENCE 항목으로 이동해도 알맞은 슬라이드가 열리도록 URL 해시를 처리했습니다.
+- 변경 파일: `test/index.html`, `test/qna.html`, `test/styles.css`, `test/script.js`, `WORKLOG.md`
+- 검증: `npm run build`, `git diff --check` 통과

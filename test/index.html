@@ -13,7 +13,7 @@
 <body>
   <header>
     <a class="logo" href="#top">STILL<span>.</span></a>
-    <nav aria-label="주 메뉴"><a href="#about">ABOUT</a><div class="nav-group"><a href="#major-projects">EXPERIENCE</a><div class="submenu"><a href="#major-projects">프로젝트</a><a href="#design">디자인 경험</a><a href="#theater">동아리 활동</a></div></div><a href="#now">NOW</a><a href="qna.html">Q&amp;A</a></nav>
+    <nav aria-label="주 메뉴"><a href="#about">ABOUT</a><div class="nav-group"><a href="#experience">EXPERIENCE</a><div class="submenu"><a href="#experience-projects" data-experience-target="0">프로젝트</a><a href="#experience-design" data-experience-target="1">디자인 경험</a><a href="#experience-theater" data-experience-target="2">동아리 활동</a></div></div><a href="#now">NOW</a><a href="qna.html">Q&amp;A</a></nav>
     <a class="contact" href="auth.html">LOGIN ↗</a>
     <button class="menu" type="button" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i></button>
   </header>
@@ -53,42 +53,22 @@
       </div>
     </section>
 
-    <section class="section experience" id="major-projects">
-      <p class="label">03 — MAJOR PROJECTS</p>
-      <div class="split"><h2>전공을 바탕으로<br>직접 구현한 것들.</h2><p class="side-copy">데이터의 흐름부터 게임 속 상호작용까지,<br>팀 안에서 맡은 부분을 구체적인 결과로 만들었습니다.</p></div>
-      <div class="experience-list">
-        <article class="experience-item">
-          <div class="experience-title"><span>2025 · 1학기</span><h3>지역사회 데이터 아카이브</h3></div>
-          <div class="experience-detail"><p>지역사회 데이터를 아카이브하고 시각화하는 프로젝트에서 시각화 파트의 백엔드를 담당했습니다.</p><ul><li>시각화 데이터 제공을 위한 API 구성</li><li>PostgreSQL 데이터베이스 연결</li><li>데이터 시각화 파트 백엔드 구현</li></ul><div class="tags"><span>BACKEND</span><span>API</span><span>POSTGRESQL</span></div></div>
-        </article>
-        <article class="experience-item">
-          <div class="experience-title"><span>2025 · 2학기</span><h3>탑다운 뷰 슈팅게임</h3></div>
-          <div class="experience-detail"><p>탑다운 시점의 슈팅게임을 팀으로 제작하며 공간과 상호작용, 시각 요소를 구현했습니다.</p><ul><li>맵 디자인 및 게임 종료 화면 구성</li><li>투척물 기능과 모션 구현</li><li>수류탄 모델링, 애니메이션 및 사운드 담당</li></ul><div class="tags"><span>GAME</span><span>MAP DESIGN</span><span>3D</span><span>ANIMATION</span></div></div>
-        </article>
+    <section class="section experience-showcase" id="experience">
+      <p class="label">03 — EXPERIENCE</p>
+      <div class="split"><h2>서로 다른 경험을<br>하나의 창에서.</h2><p class="side-copy">탭이나 화살표를 눌러 프로젝트, 디자인 경험,<br>동아리 활동을 옆으로 넘겨볼 수 있습니다.</p></div>
+      <div class="experience-window">
+        <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="experience-tabs" role="tablist"><button class="active" type="button" data-slide="0">PROJECTS</button><button type="button" data-slide="1">DESIGN</button><button type="button" data-slide="2">THEATER</button></div><span>03 PAGES</span></div>
+        <div class="experience-track">
+          <article class="experience-slide" id="experience-projects" data-slide-panel="0"><div class="slide-heading"><span>01 / PROJECTS</span><h3>전공을 바탕으로<br>직접 구현한 것들.</h3></div><div class="slide-cards"><div><small>2025 · 1학기</small><h4>지역사회 데이터 아카이브</h4><p>시각화 파트의 백엔드를 담당해 API를 구성하고 PostgreSQL 데이터베이스를 연결했습니다.</p><div class="tags"><span>BACKEND</span><span>API</span><span>POSTGRESQL</span></div></div><div><small>2025 · 2학기</small><h4>탑다운 뷰 슈팅게임</h4><p>맵과 게임 종료 화면, 투척물 모션을 구현하고 수류탄 모델링·애니메이션·사운드를 담당했습니다.</p><div class="tags"><span>GAME</span><span>MAP DESIGN</span><span>3D</span></div></div></div></article>
+          <article class="experience-slide" id="experience-design" data-slide-panel="1"><div class="slide-heading"><span>02 / DESIGN</span><h3>평면에서 입체까지,<br>형태를 탐색한 경험.</h3></div><div class="slide-cards"><div><small>ADOBE ILLUSTRATOR</small><div class="slide-mark">Ai</div><h4>게임 포스터 디자인</h4><p>탑다운 슈팅게임의 가상 홍보 포스터를 2D 그래픽으로 제작했습니다.</p></div><div><small>FUSION 360</small><div class="slide-mark inverse">360°</div><h4>사물 디자인과 모델링</h4><p>여러 사물의 형태를 직접 디자인하고 입체 모델로 제작했습니다.</p></div></div></article>
+          <article class="experience-slide" id="experience-theater" data-slide-panel="2"><div class="slide-heading"><span>03 / THEATER</span><h3>공연을 만드는<br>세 가지 시선.</h3></div><ol class="slide-timeline"><li><span>2023 · 1학기</span><strong>‘무대사랑’ 공연</strong><em>연출</em></li><li><span>2023 · 2학기</span><strong>정기공연</strong><em>무대</em></li><li><span>2024 · 2학기</span><strong>정기공연</strong><em>배우</em></li></ol></article>
+        </div>
+        <div class="window-controls"><button type="button" data-slide-prev aria-label="이전 경험">← PREV</button><div class="slide-count"><b>01</b><span>/ 03</span></div><button type="button" data-slide-next aria-label="다음 경험">NEXT →</button></div>
       </div>
-    </section>
-
-    <section class="section dark design-section" id="design">
-      <p class="label">04 — DESIGN</p>
-      <div class="split"><h2>평면에서 입체까지,<br>형태를 탐색합니다.</h2><p class="side-copy">2025년 2학기, 2D와 3D 디자인 도구를 사용하며<br>아이디어를 눈에 보이는 형태로 옮겨봤습니다.</p></div>
-      <div class="design-grid">
-        <article><span>2D / ADOBE ILLUSTRATOR</span><div class="design-mark">Ai</div><h3>게임 포스터 디자인</h3><p>탑다운 슈팅게임의 홍보 포스터를 만든다는 설정으로 게임의 콘셉트를 2D 그래픽으로 표현했습니다.</p></article>
-        <article><span>3D / FUSION 360</span><div class="design-mark wire">360°</div><h3>사물 디자인과 모델링</h3><p>Fusion 360을 이용해 여러 사물의 형태를 직접 디자인하고 입체 모델로 제작했습니다.</p></article>
-      </div>
-    </section>
-
-    <section class="section theater" id="theater">
-      <p class="label">05 — THEATER</p>
-      <div class="split"><h2>공연을 만드는<br>세 가지 시선.</h2><p class="side-copy">2023년 1학기부터 국민대학교 중앙 연극 동아리에서<br>연출, 무대, 배우로 공연의 여러 면을 경험했습니다.</p></div>
-      <ol class="theater-timeline">
-        <li><span>2023 · 1학기</span><strong>‘무대사랑’ 공연</strong><em>연출</em><p>공연의 방향과 무대 위 이야기를 구성하는 역할을 맡았습니다.</p></li>
-        <li><span>2023 · 2학기</span><strong>정기공연</strong><em>무대</em><p>공연이 이루어지는 공간을 구성하고 구현하는 과정에 참여했습니다.</p></li>
-        <li><span>2024 · 2학기</span><strong>정기공연</strong><em>배우</em><p>배우로 무대에 올라 관객에게 이야기를 전달했습니다.</p></li>
-      </ol>
     </section>
 
     <section class="section" id="experiments">
-      <p class="label">06 — EXPERIMENTS</p>
+      <p class="label">04 — EXPERIMENTS</p>
       <div class="split"><h2>작게 시작하고,<br>꾸준히 기록합니다.</h2><p class="side-copy">완성된 결과뿐 아니라 고민하고 배우는 과정도<br>하나의 프로젝트라고 생각합니다.</p></div>
       <div class="projects">
         <article class="project">
@@ -103,7 +83,7 @@
     </section>
 
     <section class="section now" id="now">
-      <p class="label">07 — RIGHT NOW</p>
+      <p class="label">05 — RIGHT NOW</p>
       <div class="split">
         <h2>지금, 여기에서<br>하고 있는 것들.</h2>
         <div class="now-list">
