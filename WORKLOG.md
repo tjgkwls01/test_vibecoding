@@ -126,3 +126,13 @@
 - 기존 이전·다음 버튼과 모바일 스와이프 기능은 유지했습니다.
 - 변경 파일: `test/index.html`, `test/styles.css`, `test/script.js`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과
+
+### EXPERIENCE 상세 페이지 분리
+
+- 캐러셀에서 프로젝트 세부 내용을 제거하고 카테고리 표지만 노출하도록 단순화했습니다.
+- 각 슬라이드 전체를 클릭할 수 있는 링크로 만들어 해당 상세 페이지로 이동하도록 구현했습니다.
+- 전공 프로젝트, 디자인 경험, 동아리 활동을 각각 `projects.html`, `design.html`, `theater.html`로 분리했습니다.
+- 각 상세 페이지에 기존 경험 내용과 EXPERIENCE로 돌아가는 링크를 구성했습니다.
+- 새 상세 페이지 3개가 배포 결과물에 포함되도록 Vite 및 호스팅 빌드 설정을 확장했습니다.
+- 변경 파일: `test/index.html`, `test/projects.html`, `test/design.html`, `test/theater.html`, `test/styles.css`, `test/vite.config.js`, `build-sites.mjs`, `WORKLOG.md`
+- 검증: `npm run build`, `git diff --check` 통과 및 세 상세 페이지와 캐러셀 링크 생성 확인
