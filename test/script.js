@@ -18,7 +18,7 @@ const experienceWindow = document.querySelector(".experience-window");
 if (experienceWindow) {
   const track = experienceWindow.querySelector(".experience-track");
   const tabs = [...experienceWindow.querySelectorAll("[data-slide]")];
-  const count = experienceWindow.querySelector(".slide-count b");
+  const indicators = [...experienceWindow.querySelectorAll("[data-indicator]")];
   let activeSlide = 0;
   let touchStartX = 0;
 
@@ -30,11 +30,16 @@ if (experienceWindow) {
       tab.classList.toggle("active", active);
       tab.setAttribute("aria-selected", String(active));
     });
-    count.textContent = String(activeSlide + 1).padStart(2, "0");
+    indicators.forEach((indicator, indicatorIndex) => {
+      const active = indicatorIndex === activeSlide;
+      indicator.classList.toggle("active", active);
+      indicator.setAttribute("aria-selected", String(active));
+    });
     if (updateHash) history.replaceState(null, "", `#${experienceWindow.querySelector(`[data-slide-panel="${activeSlide}"]`).id}`);
   };
 
   tabs.forEach((tab) => tab.addEventListener("click", () => showSlide(Number(tab.dataset.slide), true)));
+  indicators.forEach((indicator) => indicator.addEventListener("click", () => showSlide(Number(indicator.dataset.indicator), true)));
   experienceWindow.querySelector("[data-slide-prev]").addEventListener("click", () => showSlide(activeSlide - 1, true));
   experienceWindow.querySelector("[data-slide-next]").addEventListener("click", () => showSlide(activeSlide + 1, true));
   experienceWindow.addEventListener("touchstart", (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });

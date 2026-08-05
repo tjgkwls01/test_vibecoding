@@ -117,3 +117,12 @@
 - Q&A 페이지에서 특정 EXPERIENCE 항목으로 이동해도 알맞은 슬라이드가 열리도록 URL 해시를 처리했습니다.
 - 변경 파일: `test/index.html`, `test/qna.html`, `test/styles.css`, `test/script.js`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과
+
+### EXPERIENCE 캐러셀 인디케이터 적용
+
+- 하단의 숫자 페이지 표시를 클릭 가능한 캐러셀 인디케이터 3개로 변경했습니다.
+- 현재 슬라이드는 길게 채워진 인디케이터로 구분되도록 디자인했습니다.
+- 각 인디케이터를 클릭하면 프로젝트, 디자인 경험, 동아리 활동 화면으로 바로 이동합니다.
+- 기존 이전·다음 버튼과 모바일 스와이프 기능은 유지했습니다.
+- 변경 파일: `test/index.html`, `test/styles.css`, `test/script.js`, `WORKLOG.md`
+- 검증: `npm run build`, `git diff --check` 통과
