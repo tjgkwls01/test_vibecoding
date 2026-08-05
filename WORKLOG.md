@@ -39,3 +39,13 @@
 - 데스크톱 및 모바일 반응형 레이아웃과 스크롤 등장 효과를 적용했습니다.
 - 변경 파일: `test/index.html`, `test/styles.css`, `test/script.js`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과
+
+### Q&A 페이지 추가
+
+- 포트폴리오와 분리된 `qna.html` 페이지를 만들었습니다.
+- 학력, 전공 프로젝트, 게임 프로젝트, 디자인 도구, 연극 활동, 현재 목표에 관한 6개의 질문과 답변을 구성했습니다.
+- 질문을 누르면 답변이 펼쳐지는 아코디언 UI와 모바일 반응형 레이아웃을 적용했습니다.
+- 메인 페이지와 Q&A 페이지의 내비게이션을 서로 연결했습니다.
+- Vite 다중 페이지 빌드 설정과 호스팅 빌드 스크립트를 갱신했습니다.
+- 변경 파일: `test/qna.html`, `test/vite.config.js`, `test/index.html`, `test/styles.css`, `build-sites.mjs`, `WORKLOG.md`
+- 검증: `npm run build`, `git diff --check` 통과 및 `dist/public/qna.html` 생성 확인
