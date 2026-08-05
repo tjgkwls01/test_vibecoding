@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         index: resolve(import.meta.dirname, "index.html"),
         qna: resolve(import.meta.dirname, "qna.html"),
+        auth: resolve(import.meta.dirname, "auth.html"),
       },
     },
   },

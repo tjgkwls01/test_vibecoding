@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서하진 포트폴리오 계정 로그인 및 회원가입">
+  <title>Login — Seo Hajin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">SH<span>.</span></a>
+    <nav aria-label="주 메뉴"><a href="/">HOME</a><a href="/qna.html">Q&amp;A</a><a href="/auth.html" aria-current="page">ACCOUNT</a></nav>
+    <a class="contact" href="/">BACK HOME ↗</a>
+    <button class="menu" type="button" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-intro">
+      <p class="status"><i></i> MEMBER SPACE</p>
+      <h1>반갑습니다.<br><em>계정으로 시작하세요.</em></h1>
+      <p>회원가입 후 이메일을 확인하면<br>로그인 상태가 안전하게 유지됩니다.</p>
+    </section>
+
+    <section class="auth-panel" aria-live="polite">
+      <div class="auth-setup" id="auth-setup" hidden>
+        <span>SETUP REQUIRED</span><h2>인증 서비스 연결이 필요합니다.</h2><p>Supabase 프로젝트 URL과 Publishable Key를 환경 변수에 설정하면 실제 회원가입과 로그인이 활성화됩니다.</p>
+      </div>
+
+      <div class="auth-guest" id="auth-guest" hidden>
+        <div class="auth-tabs" role="tablist"><button class="active" type="button" role="tab" data-auth-tab="login">로그인</button><button type="button" role="tab" data-auth-tab="signup">회원가입</button></div>
+        <form id="login-form" class="auth-form">
+          <label>EMAIL<input name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
+          <label>PASSWORD<input name="password" type="password" autocomplete="current-password" minlength="6" placeholder="6자 이상 입력" required></label>
+          <button class="auth-submit" type="submit">로그인 ↗</button>
+        </form>
+        <form id="signup-form" class="auth-form" hidden>
+          <label>EMAIL<input name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
+          <label>PASSWORD<input name="password" type="password" autocomplete="new-password" minlength="6" placeholder="6자 이상 입력" required></label>
+          <label>PASSWORD CONFIRM<input name="passwordConfirm" type="password" autocomplete="new-password" minlength="6" placeholder="비밀번호 다시 입력" required></label>
+          <button class="auth-submit" type="submit">회원가입 ↗</button>
+        </form>
+      </div>
+
+      <div class="auth-member" id="auth-member" hidden>
+        <span>SIGNED IN</span><h2>로그인되었습니다.</h2><p id="account-email"></p><button class="auth-submit" id="logout-button" type="button">로그아웃 ↗</button>
+      </div>
+      <p class="auth-message" id="auth-message" role="status"></p>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="/">SH<span>.</span></a><p>MADE WITH CURIOSITY<br>AND VIBE CODING</p><div><a href="https://github.com/tjgkwls01">GITHUB ↗</a><a href="/">HOME ↗</a></div><small>© 2026 SEO HAJIN</small></footer>
+  <script type="module" src="/script.js"></script>
+  <script type="module" src="/auth.js"></script>
+</body>
+</html>

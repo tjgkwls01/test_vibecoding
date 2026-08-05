@@ -49,3 +49,15 @@
 - Vite 다중 페이지 빌드 설정과 호스팅 빌드 스크립트를 갱신했습니다.
 - 변경 파일: `test/qna.html`, `test/vite.config.js`, `test/index.html`, `test/styles.css`, `build-sites.mjs`, `WORKLOG.md`
 - 검증: `npm run build`, `git diff --check` 통과 및 `dist/public/qna.html` 생성 확인
+
+### 실제 계정 인증 기능 기반 구현
+
+- Supabase Auth를 이용한 이메일·비밀번호 회원가입, 로그인, 로그아웃 기능을 구현했습니다.
+- 이메일 확인 안내, 비밀번호 확인, 오류 메시지, 로그인 세션 유지 및 로그인 계정 표시를 추가했습니다.
+- 메인 및 Q&A 페이지에서 계정 페이지로 이동할 수 있도록 연결했습니다.
+- 인증 환경 변수가 없을 때 안전하게 설정 안내를 보여주도록 처리했습니다.
+- 실제 연결 값은 저장소에 노출되지 않도록 `.env` 파일을 Git에서 제외하고 `.env.example`만 추가했습니다.
+- Vite 다중 페이지 빌드와 배포 결과물에 `auth.html`을 포함했습니다.
+- 변경 파일: `test/auth.html`, `test/auth.js`, `test/styles.css`, `test/index.html`, `test/qna.html`, `test/vite.config.js`, `build-sites.mjs`, `.env.example`, `.gitignore`, `package.json`, `package-lock.json`, `WORKLOG.md`
+- 검증: 환경 변수 미설정 및 테스트 환경 변수 설정 상태에서 `npm run build`, `git diff --check` 통과
+- 남은 연결 작업: Supabase 프로젝트 URL과 Publishable Key 설정, 운영 사이트 URL 등록

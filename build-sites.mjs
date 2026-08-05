@@ -2,6 +2,7 @@ import { cp, mkdir, rename, writeFile } from "node:fs/promises";
 await mkdir("dist/public", { recursive: true });
 await rename("dist/index.html", "dist/public/index.html");
 await rename("dist/qna.html", "dist/public/qna.html");
+await rename("dist/auth.html", "dist/public/auth.html");
 await rename("dist/assets", "dist/public/assets");
 await mkdir("dist/server", { recursive: true });
 await mkdir("dist/.openai", { recursive: true });
